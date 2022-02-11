@@ -4,8 +4,7 @@
  * @copyright Copyright (c) 2022 Power Kernel
  */
 
-import { Client } from 'pg';
-import { PgConfig } from '.';
+import { Client, ClientConfig } from 'pg';
 
 class PgClient {
   private wrappedClient?: Client;
@@ -17,13 +16,8 @@ class PgClient {
     return this.wrappedClient;
   }
 
-  async connect(pgConfig: PgConfig): Promise<void> {
-    this.wrappedClient = new Client({
-      host: pgConfig.host,
-      port: pgConfig.port,
-      user: pgConfig.user,
-      password: pgConfig.password,
-    });
+  async connect(config: ClientConfig): Promise<void> {
+    this.wrappedClient = new Client(config);
     await this.wrappedClient.connect();
   }
 
