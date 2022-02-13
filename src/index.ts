@@ -5,6 +5,5 @@
  */
 
 import PgClient from './pg-client';
-import PgConfig from './pg-config';
 
-export { PgClient, PgConfig };
+export { PgClient };
