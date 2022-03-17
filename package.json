@@ -1,5 +1,5 @@
 {
-  "name": "@powerkernel/power-postgresql-client",
+  "name": "@powerkernel/postgresql-client",
   "version": "1.0.0",
   "description": "PostgreSQL client used by Power Kernel projects",
   "main": "./dist/index.js",
